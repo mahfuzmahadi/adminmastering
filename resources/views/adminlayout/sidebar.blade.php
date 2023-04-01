@@ -65,6 +65,12 @@
               <p>Blogs</p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{ route('adminlayout.pages.slider') }}" class="nav-link">
+              <i class="fas fa-file nav-icon"></i>
+              <p>Slider</p>
+            </a>
+          </li>
           {{-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>

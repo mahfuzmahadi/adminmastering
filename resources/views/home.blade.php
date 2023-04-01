@@ -14,7 +14,7 @@
     
     
     @include('layouts.menubar');
-
+    @include('layouts.slider');
 
     <script src="{{ asset('css/popper.min.js') }}"></script>
 </body>

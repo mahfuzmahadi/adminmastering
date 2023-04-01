@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WidgetController;
 use App\Http\Controllers\AdminblogController;
+use App\Http\Controllers\AdminsliderController;
 use App\Http\Controllers\BlogController;
 
 
@@ -26,9 +27,14 @@ Route::get('/admin/pages/widgets', [WidgetController::class, 'index'])->name('ad
 Route::get('/admin/pages/blogs', [AdminblogController::class, 'index'])->name('adminlayout.pages.blogs');
 
 
+Route::get('/admin/pages/slider', [AdminsliderController::class, 'index'])->name('adminlayout.pages.slider');
+Route::post('/admin/pages/slider', [AdminsliderController::class, 'store'])->name('admin.slider.store');
+Route::delete('/admin/slider/{id}', [AdminSliderController::class, 'delete'])->name('admin.slider.delete');
+// Route::put('/admin/slider/{id}', [AdminSliderController::class, 'update'])->name('admin.slider.update');
+
+
 
 Route::get('/blog', [BlogController::class, 'index'])->name('frontend.blog');
-
 Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');
 
 

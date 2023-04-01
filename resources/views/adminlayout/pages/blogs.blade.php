@@ -196,10 +196,10 @@
             <thead>
                 <tr>
                     <th style="width: 1%">#</th>
-                    <th style="width: 21%">Blog Title</th>
-                    <th style="width: 13%">Authors</th>
+                    <th style="width: 20%">Blog Title</th>
+                    <th style="width: 10%">Authors</th>
                     <th style="width: 30%">Contents</th>
-                    <th style="width: 5%" class="text-center">Status</th>
+                    <th style="width: 9%" class="text-center">Status</th>
                     <th style="width: 30%"></th>
                 </tr>
             </thead>
@@ -218,7 +218,7 @@
                     </td>
                     <td class="project-actions text-right">
                       <a class="btn btn-primary btn-sm" href="#" data-toggle="modal" data-target="#viewModal{{ $blog->id }}">
-                         <i class="fas fa-folder"></i> View
+                         <i class="fas fa-folder"></i> 
                       </a>
                       <div class="modal fade" id="viewModal{{ $blog->id }}" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel{{ $blog->id }}" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
@@ -242,14 +242,14 @@
                         </div>
                       </div>
                         <a class="btn btn-info btn-sm" href="#">
-                            <i class="fas fa-pencil-alt"></i> Edit
+                            <i class="fas fa-pencil-alt"></i> 
                         </a>
                         <a class="btn btn-success btn-sm" href="">
-                          <i class="fas fa-check"></i> Approve
+                          <i class="fas fa-check"></i> 
                         </a>
                       
                         <a class="btn btn-danger btn-sm" href="#">
-                            <i class="fas fa-trash"></i> Delete
+                            <i class="fas fa-trash"></i> 
                         </a>
                     </td>
                 </tr>
