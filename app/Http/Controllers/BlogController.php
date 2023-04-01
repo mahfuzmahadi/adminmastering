@@ -9,7 +9,9 @@ class BlogController extends Controller
 {
     public function index()
 
+
     {
+        
         $blogs = Blog::orderBy('created_at', 'desc')->get();
         return view('frontend.blog', ['blogs' => $blogs]);
       

@@ -3,6 +3,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WidgetController;
+use App\Http\Controllers\AdminblogController;
 use App\Http\Controllers\BlogController;
 
 
@@ -22,6 +23,10 @@ Route::get('/', function () {
 });
 
 Route::get('/admin/pages/widgets', [WidgetController::class, 'index'])->name('adminlayout.pages.widgets');
+Route::get('/admin/pages/blogs', [AdminblogController::class, 'index'])->name('adminlayout.pages.blogs');
+
+
+
 Route::get('/blog', [BlogController::class, 'index'])->name('frontend.blog');
 
 Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');

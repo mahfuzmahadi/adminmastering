@@ -15,7 +15,8 @@ class CreateBlogsTable extends Migration
             $table->string('author_name');
             $table->string('author_email');
             $table->timestamps();
-        });       
+        });    
+   
     }
     public function down()
     {

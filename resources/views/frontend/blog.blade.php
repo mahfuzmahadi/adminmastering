@@ -6,25 +6,71 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-5Nfz1cNclxR5z5b5/GtdlYgOIptlSD7V9jKLZG1dVfxJiGXuOF7KgeI4w84+ynD75PjnQ+c/zkJ/I9ECZj3Hgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <style>
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .blog-post-meta {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+
+    .card-text {
+        font-size: 1rem;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        padding: 1rem;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0069d9;
+        border-color: #0062cc;
+        transform: translateY(-2px);
+    }
+</style>
     <!-- include the menubar -->
     @include('layouts.menubar')
 
     <!-- list of blogs -->
     <div class="container mt-4">
-        <div class="row">
-            @foreach ($blogs as $blog)
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $blog->title }}</h5>
-                        <p class="blog-post-meta">{{ $blog->created_at }} by {{ $blog->author_name }}</p>
-                        <p class="card-text">{!! htmlspecialchars_decode($blog->content) !!}</p>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
+      <div class="row">
+          @foreach ($blogs as $blog)
+          <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                  <div class="card-body">
+                      <h5 class="card-title">{{ $blog->title }}</h5>
+                      <p class="blog-post-meta">{{ $blog->created_at }} by {{ $blog->author_name }}</p>
+                      <p class="card-text">{!! substr(htmlspecialchars_decode($blog->content), 0, 150) . '...' !!}</p>
+                   <a href="" class="btn btn-primary">Read More</a> 
+
+                      {{-- <a href="{{ route('blog.show', ['id' => $blog->id]) }}" class="btn btn-primary">Read More</a> --}}
+                  </div>
+              </div>
+          </div>
+          @endforeach
+      </div>
+  </div>
+  
+
+  
 
     <!-- create blog button -->
     <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#createBlogModal" style="position: fixed; top: 20px; right: 20px; background-color: green;">

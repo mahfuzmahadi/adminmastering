@@ -59,7 +59,12 @@
               </p>
             </a>
           </li>
-          
+          <li class="nav-item">
+            <a href="{{ route('adminlayout.pages.blogs') }}" class="nav-link">
+              <i class="fas fa-file nav-icon"></i>
+              <p>Blogs</p>
+            </a>
+          </li>
           {{-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
@@ -95,7 +100,7 @@
               </li>
             </ul>
           </li> --}}
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tree"></i>
               <p>
@@ -235,7 +240,7 @@
                 Gallery
               </p>
             </a>
-          </li>
+          </li> --}}
           {{-- <li class="nav-item">
             <a href="pages/kanban.html" class="nav-link">
               <i class="nav-icon fas fa-columns"></i>
@@ -244,7 +249,7 @@
               </p>
             </a>
           </li> --}}
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-envelope"></i>
               <p>
@@ -495,7 +500,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
           {{-- <li class="nav-header">MISCELLANEOUS</li>
           <li class="nav-item">
             <a href="iframe.html" class="nav-link">
