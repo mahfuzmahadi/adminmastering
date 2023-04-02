@@ -13,7 +13,8 @@ Installation
 
     Clone the repository.
     Run composer install to install the necessary dependencies.
-    Create a .env file by running cp .env.example .env and updating the necessary database and email credentials.
+    Create a .env file by running cp .env.example .env 
+    update the necessary database and email credentials.
     Generate an application key by running php artisan key:generate.
     Run the migrations by running php artisan migrate.
     Start the development server by running php artisan serve.
@@ -21,19 +22,23 @@ Installation
 Authentication
 
     To use the authentication feature, you can register a new account or use the default admin account:
-    Email: admin@example.com
-    Password: password
+    Email: mahfuzurmahadi@gmail.com
+    Password: 123456789
 Image Management
 
-    To manage images, log in to the admin panel and navigate to the "Images" section. Here you can upload new images, edit existing ones, and delete them.
+    To manage images, log in to the admin panel and navigate to the "Images" section. 
+    Here you can upload new images, 
+    edit existing ones, and delete them.
 
 Blog Posting
 
-    To create a new blog post, log in to the admin panel and navigate to the "Blog" section. Here you can create a new post, edit existing ones, and delete them.
+    To create a new blog post, log in to the admin panel and navigate to the "Blog" section. 
+    Here you can create a new post, edit existing ones, and delete them.
     
 Sending Emails
 
-    To send emails from the admin panel, navigate to the "Mail" section and compose a new email. You can specify the recipient, subject, and body of the        email, and even attach files.
+    To send emails from the admin panel, navigate to the "Mail" section and compose a new email. 
+    You can specify the recipient, subject, and body of the email, and even attach files.
     Credits
 
 <h1>This project was created by <a href="https://github.com/mahfuzmahadi" target="_blank"> Mahfuzur Rahman </a></h1>
