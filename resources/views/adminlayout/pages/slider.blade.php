@@ -380,6 +380,7 @@
                                                 @method('DELETE')
                                                 <button type="submit" class="delete-btn">Delete</button>
                                             </form>
+                                            
                                         </div>
                                     </li>
                                 @endforeach
