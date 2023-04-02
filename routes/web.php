@@ -41,6 +41,8 @@ Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');
 
 Route::get('/admin/pages/mailbox', [MailboxController::class, 'index'])->name('adminlayout.pages.mailbox.mailbox');
 Route::get('/admin/pages/composemail', [ComposemailController::class, 'index'])->name('adminlayout.pages.mailbox.compose');
+Route::post('/send-mail', [ComposemailController::class, 'sendMail'])->name('sendMail');
+
 
 Route::middleware([
     'auth:sanctum',
