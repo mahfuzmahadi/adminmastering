@@ -317,25 +317,31 @@
               <div class="table-responsive mailbox-messages">
                 <table class="table table-hover table-striped">
                   <tbody>
-                  <tr>
-                    <td>
-                      <div class="icheck-primary">
-                        <input type="checkbox" value="" id="check1">
-                        <label for="check1"></label>
-                      </div>
-                    </td>
-                    <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                    <td class="mailbox-name"><a href="read-mail.html">email</a></td>
-                    <td class="mailbox-subject"><b>Subject</b> - body...
-                    </td>
-                    <td class="mailbox-attachment"></td>
-                    <td class="mailbox-date">5 mins ago</td>
-                  </tr>
-                 
+                    @foreach ($mails as $mail)
+                    <tr>
+                      <td>
+                        <div class="icheck-primary">
+                          <input type="checkbox" value="" id="check{{ $mail->id }}">
+                          <label for="check{{ $mail->id }}"></label>
+                        </div>
+                      </td>
+                      <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
+                      <td class="mailbox-name"><a href="read-mail.html">{{ $mail->sender }}</a></td>
+                      <td class="mailbox-subject"><b>{{ $mail->subject }}</b> - {{ $mail->body }}
+                        <div>
+                          <small class="text-muted">To: {{ $mail->recipient }}</small>
+                        </div>
+                      </td>
+                      <td class="mailbox-attachment"></td>
+                      <td class="mailbox-date">{{ $mail->created_at->diffForHumans() }}</td>
+                    </tr>
+                    @endforeach
                   </tbody>
                 </table>
                 <!-- /.table -->
               </div>
+              
+            
               <!-- /.mail-box-messages -->
             </div>
             <!-- /.card-body -->

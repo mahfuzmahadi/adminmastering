@@ -100,6 +100,41 @@
               </li> --}}
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-envelope"></i>
+              <p>
+                E Commerece
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('adminlayout.pages.mailbox.mailbox') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('adminlayout.pages.mailbox.compose') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('adminlayout.pages.mailbox.compose') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Orders</p>
+                </a>
+              </li>
+              {{-- <li class="nav-item">
+                <a href="pages/mailbox/read-mail.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Read</p>
+                </a>
+              </li> --}}
+            </ul>
+          </li>
           {{-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
