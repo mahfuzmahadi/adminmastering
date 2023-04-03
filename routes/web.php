@@ -8,6 +8,9 @@ use App\Http\Controllers\AdminsliderController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MailboxController;
 use App\Http\Controllers\ComposemailController;
+use App\Http\Controllers\AddproductController;
+use App\Http\Controllers\ProductviewController;
+use App\Http\Controllers\OrderController;
 
 
 /*
@@ -39,9 +42,22 @@ Route::get('/admin/pages/blogs', [AdminblogController::class, 'index'])->name('a
 Route::get('/blog', [BlogController::class, 'index'])->name('frontend.blog');
 Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');
 
+
 Route::get('/admin/pages/mailbox', [MailboxController::class, 'index'])->name('adminlayout.pages.mailbox.mailbox');
 Route::get('/admin/pages/composemail', [ComposemailController::class, 'index'])->name('adminlayout.pages.mailbox.compose');
 Route::post('/send-mail', [ComposemailController::class, 'sendMail'])->name('sendMail');
+
+
+Route::get('/admin/pages/viewproduct', [ ProductviewController::class, 'index'])->name('adminlayout.pages.shop.viewproduct');
+
+
+Route::get('/admin/pages/addproduct', [AddproductController::class, 'index'])->name('adminlayout.pages.shop.addproduct');
+Route::post('/submit_product', [AddproductController::class, 'store'])->name('products.store');
+
+
+Route::get('/admin/pages/order', [OrderController::class, 'index'])->name('adminlayout.pages.shop.order');
+
+
 
 
 Route::middleware([

@@ -110,19 +110,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ route('adminlayout.pages.mailbox.mailbox') }}" class="nav-link">
+                <a href="{{ route('adminlayout.pages.shop.addproduct') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Products</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('adminlayout.pages.mailbox.compose') }}" class="nav-link">
+                <a href="{{ route('adminlayout.pages.shop.viewproduct') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Products</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('adminlayout.pages.mailbox.compose') }}" class="nav-link">
+                <a href="{{ route('adminlayout.pages.shop.order') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Orders</p>
                 </a>
