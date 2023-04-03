@@ -13,4 +13,11 @@ class ProductviewController extends Controller
 
         return view('adminlayout.pages.shop.viewproduct', compact('products'));
     }
+    public function destroy(Product $product)
+    {
+        $product->delete();
+
+        return redirect()->back()->with('success', 'Product deleted successfully.');
+    }
+
 }

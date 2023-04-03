@@ -11,6 +11,7 @@ use App\Http\Controllers\ComposemailController;
 use App\Http\Controllers\AddproductController;
 use App\Http\Controllers\ProductviewController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\AllproductController;
 
 
@@ -50,6 +51,7 @@ Route::post('/send-mail', [ComposemailController::class, 'sendMail'])->name('sen
 
 
 Route::get('/products', [AllproductController::class, 'index'])->name('frontend.allproduct');
+Route::delete('/products/{product}', [ProductviewController::class, 'destroy'])->name('products.destroy');
 Route::get('/admin/pages/viewproduct', [ ProductviewController::class, 'index'])->name('adminlayout.pages.shop.viewproduct');
 
 
@@ -57,6 +59,7 @@ Route::get('/admin/pages/addproduct', [AddproductController::class, 'index'])->n
 Route::post('/submit_product', [AddproductController::class, 'store'])->name('products.store');
 
 
+Route::get('/cart', [CartController::class, 'index'])->name('frontend.cart');
 Route::get('/admin/pages/order', [OrderController::class, 'index'])->name('adminlayout.pages.shop.order');
 
 

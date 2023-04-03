@@ -3,15 +3,17 @@
 
 <style>
     .navbar {
-        background-color: #222;
-        background-image: linear-gradient(to right, #222, #333);
-        font-family: 'Open Sans', sans-serif;
+        background-image: url('https://i.ibb.co/y8w1dFK/Download-Mountains-at-Night-Landscape-Scene-for-free.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Helvetica Neue', sans-serif;
+  
     }
 
     .navbar-brand {
         font-size: 24px;
         font-weight: bold;
-        text-shadow: 1px 1px 2px #555;
+        text-shadow: 1px 1px 2px #ffffff;
     }
 
     .navbar-nav .nav-link {
@@ -20,22 +22,50 @@
     }
 
     .navbar-nav .nav-link:hover {
-        color: #ffc107;
-    }
+    color: #ffc107;
+    background-color: #333;
+}
 
     .dropdown-menu {
-        background-color: #333;
-        border: none;
-    }
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #fff;
+    text-align: left;
+    background-color: #333;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+}
 
-    .dropdown-item {
-        color: #fff;
-        transition: all 0.3s ease;
-    }
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
 
-    .dropdown-item:hover {
-        background-color: #ffc107;
-    }
+.dropdown-toggle:focus+.dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #fff;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
 </style>
 
 

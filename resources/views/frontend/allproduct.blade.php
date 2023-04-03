@@ -85,11 +85,6 @@
 </div>
 </div>
 
-      
-      
-
-
-
 
    <!-- JavaScript code for the product card -->
    <script>

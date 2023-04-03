@@ -242,7 +242,14 @@
           <td>{{ $product->details }}</td>
           <td>
             <button class="btn btn-primary">Edit</button>
-            <button class="btn btn-danger">Delete</button>
+         
+              <form action="{{ route('products.destroy', $product->id) }}" method="POST">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+          
+          
           </td>
         </tr>
         @endforeach
