@@ -253,8 +253,8 @@
                         <input type="text" id="category" name="category">
                         <label for="name">Product Name:</label>
                         <input type="text" id="name" name="name">
-                        <label for="stock">Stock:</label>
-                        <input type="number" id="stock" name="stock">
+                        <label for="price">price:</label>
+                        <input type="number" id="price" name="price">
                         <label for="photo">Photo:</label>
                         <input type="file" id="photo" name="photo">
                         <label for="details">Details:</label>

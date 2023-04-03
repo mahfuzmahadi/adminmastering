@@ -19,7 +19,7 @@ class AddproductController extends Controller
         $validatedData = $request->validate([
             'category' => 'required',
             'name' => 'required',
-            'stock' => 'required|integer',
+            'price' => 'required|integer',
             'details' => 'required',
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -27,7 +27,7 @@ class AddproductController extends Controller
         $product = new Product;
         $product->category = $request->input('category');
         $product->name = $request->input('name');
-        $product->stock = $request->input('stock');
+        $product->price = $request->input('price');
         $product->details = $request->input('details');
 
         if ($request->hasFile('photo')) {

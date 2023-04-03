@@ -221,39 +221,34 @@
       </div><!-- /.container-fluid -->
     </section>
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <h1>Product List</h1>
-        <table id="product-table" class="table">
-          <thead>
-            <tr>
-              <th>Category</th>
-              <th>Product Name</th>
-              <th>Stock</th>
-              <th>Photo</th>
-              <th>Details</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Electronics</td>
-              <td>iPhone 13</td>
-              <td>10</td>
-              <td><img src="iphone13.jpg" alt="iPhone 13"></td>
-              <td>The iPhone 13 features a stunning Super Retina XDR display and a powerful A15 Bionic chip for incredible performance.</td>
-              <td>
-                <button class="btn btn-primary">Edit</button>
-                <button class="btn btn-danger">Delete</button>
-              </td>
-            </tr>
-            <!-- Add more rows dynamically using JavaScript or fetch data from the database using AJAX -->
-          </tbody>
-        </table>
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+    <table id="product-table" class="table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Product Name</th>
+          <th>price</th>
+          <th>Photo</th>
+          <th>Details</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($products as $product)
+        <tr>
+          <td>{{ $product->category }}</td>
+          <td>{{ $product->name }}</td>
+          <td>{{ $product->price }}</td>
+          <td><img style="height: 80px; width:80px;" src="{{ asset('img/products/'.$product->photo) }}" alt="{{ $product->name }}"></td>
+          <td>{{ $product->details }}</td>
+          <td>
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+    
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">

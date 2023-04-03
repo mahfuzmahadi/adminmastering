@@ -11,6 +11,7 @@ use App\Http\Controllers\ComposemailController;
 use App\Http\Controllers\AddproductController;
 use App\Http\Controllers\ProductviewController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\AllproductController;
 
 
 /*
@@ -48,6 +49,7 @@ Route::get('/admin/pages/composemail', [ComposemailController::class, 'index'])-
 Route::post('/send-mail', [ComposemailController::class, 'sendMail'])->name('sendMail');
 
 
+Route::get('/products', [AllproductController::class, 'index'])->name('frontend.allproduct');
 Route::get('/admin/pages/viewproduct', [ ProductviewController::class, 'index'])->name('adminlayout.pages.shop.viewproduct');
 
 
