@@ -24,6 +24,7 @@ Authentication
     To use the authentication feature, you can register a new account or use the default admin account:
     Email: mahfuzurmahadi@gmail.com
     Password: 123456789
+    
 Image Management
 
     To manage images, log in to the admin panel and navigate to the "Images" section. 
@@ -40,6 +41,11 @@ Sending Emails
     To send emails from the admin panel, navigate to the "Mail" section and compose a new email. 
     You can specify the recipient, subject, and body of the email, and even attach files.
     Credits
+    
+Product Management
+
+    Upload products from admin panel
+    View products on the frontend
 
 <h1>This project was created by <a href="https://github.com/mahfuzmahadi" target="_blank"> Mahfuzur Rahman </a></h1>
 
